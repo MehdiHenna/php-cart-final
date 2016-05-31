@@ -12,6 +12,9 @@ class CartController extends Controller {
 	}	
 
 	public function postAdd(Request $request, Application $app){
+		$product=Product::find($request->get('product_id'));
+		
+		return $app->redirect('/');
 	}	
 
 }

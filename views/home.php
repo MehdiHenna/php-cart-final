@@ -6,6 +6,7 @@
 	<section class="ui three stackable cards">
 		<!-- boucle des produits ui card -->
 		<?php foreach ($products as $product): ?>
+			<form method="POST" action="cart/add">
 			<div class="card">
 				<div class="image">
 					<img src="<?= $product->picture ?>">				
@@ -14,10 +15,11 @@
 					<h3><?= $product->name ?></h3>
 				</div>
 				<p class="description"><?= $product->price ?>€</p>
-			<div class="ui bottom attached animated button" tabindex="0">Add</div>
-			</div>
 				
-			
+			<button class="ui bottom attached button" tabindex="0" name="submitPrice" type="submit" >Add</button>
+			<input  type="hidden"  name="product_id" value="<?=$product->id?>">
+			</div>
+			</form>	
 		<?php endforeach;?>
 	</section>
 </div>

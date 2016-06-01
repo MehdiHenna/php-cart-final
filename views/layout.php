@@ -26,7 +26,7 @@
     </div>
     <!-- flash message -->
     <?=$this->section('content')?>
-    <details>
+    <details open="on">
         <h2>$_SESSION</h2>
         <pre><code><?php var_dump($_SESSION)?></code></pre>
         <h2>$_COOKIE</h2>

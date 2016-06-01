@@ -8,12 +8,13 @@ use Cart;
 class CartController extends Controller {
 
 	public function getIndex(Request $request, Application $app){
-		return view('cart/index', ['products' => Product::all()]);
+		
+		return view('cart/index', ['products' => Cart::get()]);
 	}	
 
 	public function postAdd(Request $request, Application $app){
 		$product=Product::find($request->get('product_id'));
-		
+		Cart::add($product->toArray());
 		return $app->redirect('/');
 	}	
 

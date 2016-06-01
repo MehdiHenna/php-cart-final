@@ -15,6 +15,19 @@
 		<div class="column">
 			<table class="ui table compact">
 				<!-- une boucle ! -->
+			<thead>
+    			<tr>
+    			<th>Header</th>
+    			<th>Header</th>
+    			<th>Header</th>
+    			</tr>
+  			</thead>
+
+				<?php foreach ($products as $product):?>
+				<tr>
+					<td><?= $product->picture ?></td>
+				</tr>
+				<?php endforeach;?>	
 			</table>
 		</div>
 	</div>

@@ -16,6 +16,7 @@ class CartController extends Controller {
 		$_SESSION['flashMsg'] = "Vous avez ajouté un produit";
 		Cart::add($product->toArray());
 		return $app->redirect('/');
-	}	
+	}
+	
 
 }

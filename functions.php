@@ -13,5 +13,8 @@ function view($path, $vars = null){
  * affiche un message stocké dans la session pour une future requete
  */
 function flash() {
-
+	if(isset($_SESSION['cart'])){
+		$msg = "Vous avez rajouté un produit dans votre panier";
+	}
+	return $msg;
 }

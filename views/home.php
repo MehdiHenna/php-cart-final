@@ -16,7 +16,7 @@
 				<p class="description"><?= $product->price ?>€</p>
 				
 			<form method="POST" action="cart/add">
-			<button class="ui bottom attached button" tabindex="0" name="submitPrice" type="submit" >Add</button>
+			<button class="ui bottom attached button" tabindex="0" name="submitPrice" type="submit" >Ajouté</button>
 			<input  type="hidden"  name="product_id" value="<?=$product->id?>">
 			</div>
 			</form>	

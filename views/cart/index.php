@@ -17,15 +17,25 @@
 				<!-- une boucle ! -->
 			<thead>
     			<tr>
-    			<th>Header</th>
-    			<th>Header</th>
-    			<th>Header</th>
+    			<th>Nom</th>
+    			<th>Image</th>
+    			<th>Prix</th>
     			</tr>
   			</thead>
 
 				<?php foreach ($products as $product):?>
 				<tr>
-					<td><?= $product->picture ?></td>
+					<td>
+						<p><?= $product->name ?></p>
+					</td>
+				
+					<td>
+						<img src="<?= $product->picture ?>"/>
+					</td>
+				
+					<td>
+						<p><?= $product->price ?>€</p>
+					</td>
 				</tr>
 				<?php endforeach;?>	
 			</table>

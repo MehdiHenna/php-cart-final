@@ -25,6 +25,9 @@
         </div>
     </div>
     <!-- flash message -->
+    <?php if (isset($_SESSION['cart'])) :?>
+        <div class="ui message"><?= flash() ?></div>
+    <?php endif; ?>    
     <?=$this->section('content')?>
     <details open="on">
         <h2>$_SESSION</h2>

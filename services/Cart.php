@@ -16,11 +16,15 @@ class Cart {
 
 	public function count(){
 		
-		$TotalPriceProduct = 0;
-		return $TotalPriceProduct;
+		return count(self::get());
+		
 	}
 	public function total(){
-		$totalCase = 0;
-		return $totalCase;
+		$orders = self::get();
+		$cartOrders = [];
+		foreach ($orders as $order ) {
+			array_push($cartOrders, $order->price);		
+		}
+			return array_sum($cartOrders);
 	}
 }

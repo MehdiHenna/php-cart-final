@@ -13,6 +13,7 @@ class CartController extends Controller {
 
 	public function postAdd(Request $request, Application $app){
 		$product=Product::find($request->get('product_id'));
+		$_SESSION['flashMsg'] = "Vous avez ajouté un produit";
 		Cart::add($product->toArray());
 		return $app->redirect('/');
 	}	

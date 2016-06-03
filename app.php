@@ -19,7 +19,7 @@ $app->get('/', 'App\\Controllers\\HomeController::getIndex');
 $app->get('/logout', 'App\\Controllers\\HomeController::getLogout'); 
 $app->get('/cart', 'App\\Controllers\\CartController::getIndex');
 $app->get('/user','App\\Controllers\\UserController::getRegisterUser');
-//$app->post('/user/registerUser', 'App\\Controllers\\UserController::postRegisterUser'); 
+$app->post('/user/add', 'App\\Controllers\\UserController::postRegisterUser'); 
 $app->post('/cart/add', 'App\\Controllers\\CartController::postAdd'); 
 
 

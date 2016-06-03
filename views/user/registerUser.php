@@ -1,6 +1,6 @@
 <?php $this->layout('layout', ['title' => 'Super boutique']) ?>
 <div class="ui container">
-<form method="post" action="/user" class="ui form">
+<form method="POST" action="user/add" class="ui form">
 	<div class="field">
 		<label>Nom</label>
 		<input type="text" name="first_name" placeholder="Votre nom">

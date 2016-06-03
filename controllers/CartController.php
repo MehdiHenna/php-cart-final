@@ -17,6 +17,4 @@ class CartController extends Controller {
 		Cart::add($product->toArray());
 		return $app->redirect('/');
 	}
-	
-
 }
